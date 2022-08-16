@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJs Environment Setup</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="vue.global.js"></script>
+  </head>
+  <body>
+    <header>
+      <h2>VueJs 3 Environment Setup</h2>
+    </header>
+    <div id="app">
+      <!-- Display method value -->
+      <!-- <h2>Time: {{ getCurrentTime() }}</h2> -->
+      <h2>Count: {{ count }}</h2>
+      <!-- <button v-on:click="increment">+ Increment</button>
+      <button v-on:click="decrement">- Decrement</button> -->
+      <button @click="increment">+ Increment</button>
+      <button @click="decrement">- Decrement</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
