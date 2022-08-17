@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Two way data binding</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="vue.global.js"></script>
+  </head>
+  <body>
+    <header>
+      <h2>Two way data binding -- (v-model)</h2>
+    </header>
+
+    <div id="app">
+      <h3 id="hId">Enter a number</h3>
+      <!-- <input :value="number" id="inputId" type="text" @input="handleInput"> -->
+      <input v-model.number="number" id="inputId" type="text">
+      <!-- <input v-model.lazy="number" id="inputId" type="text"> -->
+      <br>
+      <button @click="getDouble">Get Double</button>
+      <button @click="getSquare">Get Square</button>
+      <button @click="addTen">Add Ten</button>
+      <button @click="reset">Reset</button>
+      <hr>
+      <br>
+      <labe>Entered Number : {{ number }}</label>
+      <br><br>
+      <labe>Result : {{ result }}</label> 
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
