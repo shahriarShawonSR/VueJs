@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ComputedProperties</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="vue.global.js"></script>
+</head>
+
+<body>
+  <header>
+    <h2>Computed Properties</h2>
+  </header>
+
+  <div id="app">
+    <input id="inputId" type="text" placeholder="Write your review.." v-model="review">
+    <h3>Skills</h3>
+    <br>
+    <ul>
+      <li v-for="(skill,key) in skills" @click="removeSkill(key)" :key="skill.name">
+        <p>
+          {{ key + 1 }}. {{ skill.name }} - ({{ skill.experience }})
+        </p>
+        <br>
+      </li>
+    </ul>
+    <span id="total">Total Skills : {{ totalCount1 }}</span>
+    <br><br>
+    <h3>Experience Skills</h3>
+    <ul>
+      <li v-for="(skill,key) in exSkill" @click="removeSkill(key)" :key="skill.name">
+        <p>
+          {{ key + 1 }}. {{ skill.name }} - ({{ skill.experience }})
+        </p>
+        <br>
+      </li>
+    </ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

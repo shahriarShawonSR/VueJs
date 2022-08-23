@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VS</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="vue.global.js"></script>
+</head>
+
+<body>
+  <header>
+    <h2>Computed property vs Method vs Watcher</h2>
+  </header>
+
+  <div id="app">
+    <input type="text" id="inputId" v-model="firstName" placeholder="Enter first name "/>
+    <br>
+    <input type="text" id="inputIdLast" v-model="lastName" placeholder="Enter last name "/>
+    <hr>
+    <br>
+    <!-- use computed property -->
+    <!-- <p>Your full name is : {{ fullName }}</p> -->
+    <!-- use methods -->
+    <!-- <p>Your full name is : {{ fullName() }}</p> -->
+    <!-- use wacher property -->
+    <p>Your full name is : {{ fullName }}</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

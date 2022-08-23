@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List Rendering</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="vue.global.js"></script>
+  </head>
+  <body>
+    <header>
+      <h2>List Rendering</h2>
+    </header>
+
+    <div id="app">
+      <h3>Skills</h3>
+      <input id="inputId" type="text" v-model="newSkill.name" />
+      <button @click="addSkill">Add</button>
+      <ul>
+        <li v-for="(skill,key) in skills" @click="removeSkill(key)" :key="skill.name">
+          <p>
+            {{ key + 1 }}. {{ skill.name }} {{ skill.experience }}
+            <br>
+            <input type="text" placeholder="Remark" @click.stop>
+          </p>
+        </li>
+      </ul>
+      <!-- <ol>
+        <li v-for="(skill,key) in skills" @click="removeSkill(key)">
+          {{ skill }}
+        </li>
+      </ol> -->
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
